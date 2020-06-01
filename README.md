@@ -55,4 +55,4 @@ This project is under the MIT license. See [LICENSE](LICENSE) for more details.
 
 ---
 
-Made with :green_heart: by Daniel Cunha :wave: 
+Made with :heart: by Daniel Cunha :wave: 
