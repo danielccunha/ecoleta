@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>
+  <h1 style="font-size: 50px">
     :recycle: <i>ecoleta</i>
   </h1>
 
@@ -47,7 +47,7 @@ To access the layout use [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28
 
 ## 🙏🏼 Acknowledgments
 
-I want to thank [Rocketseat](https://github.com/Rocketseat) for devising and providing the basis for this project
+I want to thank [Rocketseat](https://github.com/Rocketseat) for this initiative and awesome work (as always).
 
 ## :memo: License
 
@@ -55,4 +55,4 @@ This project is under the MIT license. See [LICENSE](LICENSE) for more details.
 
 ---
 
-Made with :heart: by Daniel Cunha :wave: 
+Made with :heart: by Daniel Cunha :wave:
