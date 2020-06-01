@@ -45,6 +45,14 @@ This project was developed with the following technologies:
 
 To access the layout use [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/).
 
+## 🙏🏼 Acknowledgments
+
+I want to thank [Rocketseat](https://github.com/Rocketseat) for devising and providing the basis for this project
+
 ## :memo: License
 
 This project is under the MIT license. See [LICENSE](LICENSE) for more details.
+
+---
+
+Made with :green_heart: by Daniel Cunha :wave: 
