@@ -1,9 +1,14 @@
 import express from "express";
+import knex from "./database/connection";
+import ItemController from "./controllers/ItemController";
+import PointController from "./controllers/PointController";
 
 const routes = express.Router();
 
-routes.get("/", (request, response) => {
-  return response.json({ message: "Hey there" });
-});
+// Items
+routes.get("/items", ItemController.index);
+
+// Points
+routes.post("/points", PointController.store);
 
 export default routes;
