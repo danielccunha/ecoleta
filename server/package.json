@@ -9,7 +9,7 @@
     "url": "https://www.linkedin.com/in/daniel-cunha-53053816b/"
   },
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts --no-notify"
   },
   "dependencies": {
     "chalk": "^4.0.0",
