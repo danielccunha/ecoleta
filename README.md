@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 style="font-size: 50px">
+  <h1>
     :recycle: <i>ecoleta</i>
   </h1>
 
@@ -31,6 +31,41 @@ Ecoleta is a project developed based on international environment week. That aim
 <h1 align="center">
     <img alt="Example" title="Example" src=".github/ecoleta.png" />
 </h1>
+
+## :fire: Usage
+
+To use this project you'll need [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed on your computer. Optionally you can use [npm](https://www.npmjs.com/) instead of Yarn.
+
+```sh
+# Clone the project
+git clone https://github.com/danielccunha/ecoleta.git
+cd ecoleta
+
+# Open server folder and its dependencies
+cd server
+yarn
+
+# Run migrations and seed
+yarn knex migrate:latest
+yarn knex seed:run
+
+# Run the server in development mode
+yarn dev
+
+# Open another terminal and navigate to web folder
+cd ../web
+
+# Install web dependencies and start web application
+yarn
+yarn start
+
+# Finally, open another terminal and navigate to mobile folder
+cd ../mobile
+yarn
+
+# And finally, start the mobile project
+yarn start
+```
 
 ## :rocket: Technologies
 
