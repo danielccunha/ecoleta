@@ -41,7 +41,7 @@ To use this project you'll need [Git](https://git-scm.com/), [Node.js](https://n
 git clone https://github.com/danielccunha/ecoleta.git
 cd ecoleta
 
-# Open server folder and its dependencies
+# Open server folder and install its dependencies
 cd server
 yarn
 
@@ -59,11 +59,11 @@ cd ../web
 yarn
 yarn start
 
-# Finally, open another terminal and navigate to mobile folder
+# Open another terminal and navigate to mobile folder
 cd ../mobile
-yarn
 
-# And finally, start the mobile project
+# And finally, install mobile project dependencies and start it
+yarn
 yarn start
 ```
 
