@@ -1,14 +1,14 @@
 import express from "express";
-import knex from "./database/connection";
-import ItemController from "./controllers/ItemController";
-import PointController from "./controllers/PointController";
+import * as controllers from "./controllers";
 
 const routes = express.Router();
 
 // Items
-routes.get("/items", ItemController.index);
+routes.get("/items", controllers.Items.index);
 
 // Points
-routes.post("/points", PointController.store);
+routes.get("/points", controllers.Points.index);
+routes.get("/points/:id", controllers.Points.show);
+routes.post("/points", controllers.Points.store);
 
 export default routes;
