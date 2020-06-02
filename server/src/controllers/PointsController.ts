@@ -60,7 +60,8 @@ class PointController {
 
     const trx = await knex.transaction();
     const [point_id] = await trx("points").insert({
-      image: "tmp_image",
+      image:
+        "https://images.unsplash.com/photo-1501523460185-2aa5d2a0f981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
       ...omit(dto, "items"),
     });
 
