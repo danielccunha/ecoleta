@@ -1,2 +1,2 @@
-export { default as Items } from "./ItemsController";
-export { default as Points } from "./PointsController";
+export { default as Item } from "./ItemController";
+export { default as Point } from "./PointController";
