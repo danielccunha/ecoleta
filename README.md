@@ -90,4 +90,6 @@ This project is under the MIT license. See [LICENSE](LICENSE) for more details.
 
 ---
 
-Made with :heart: by Daniel Cunha :wave:
+<h4 align="center">
+	Made with :heart: by <a href="https://www.linkedin.com/in/daniel-cunha-53053816b/" target="_blank">Daniel Cunha</a> :wave:
+</h4>
