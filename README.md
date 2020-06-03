@@ -49,6 +49,10 @@ yarn
 yarn knex migrate:latest
 yarn knex seed:run
 
+# Optionally copy .env.example file. It contains server port and morgan mode. Both have default values
+cp .env.example .env
+nano .env
+
 # Run the server in development mode
 yarn dev
 

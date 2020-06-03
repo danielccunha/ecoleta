@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 3333;
 
 app.use(cors());
-app.use(morgan(process.env.MORGAN_MODE || "combined"));
+app.use(morgan(process.env.MORGAN_MODE || "dev"));
 app.use(express.json());
 app.use(routes);
 app.use("/uploads", express.static(path.resolve(__dirname, "..", "uploads")));
