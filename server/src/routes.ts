@@ -1,5 +1,6 @@
 import express from "express";
 import * as controllers from "./controllers";
+import * as validators from "./validators";
 
 const routes = express.Router();
 
@@ -7,8 +8,8 @@ const routes = express.Router();
 routes.get("/items", controllers.Item.index);
 
 // Points
-routes.get("/points", controllers.Point.index);
-routes.get("/points/:id", controllers.Point.show);
-routes.post("/points", controllers.Point.store);
+routes.get("/points", validators.Point.index, controllers.Point.index);
+routes.get("/points/:id", validators.Point.show, controllers.Point.show);
+routes.post("/points", validators.Point.store, controllers.Point.store);
 
 export default routes;
