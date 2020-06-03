@@ -1,5 +1,5 @@
-import { celebrate } from "celebrate";
-import * as PointValidator from "./PointValidator";
+import { celebrate } from 'celebrate';
+import * as PointValidator from './PointValidator';
 
 export const Point = {
   index: celebrate(PointValidator.index),

@@ -1,9 +1,9 @@
-import { Request, Response } from "express";
-import knex from "../database/connection";
+import { Request, Response } from 'express';
+import knex from '../database/connection';
 
 class ItemController {
   async index(request: Request, response: Response): Promise<Response> {
-    const items = await knex("items").select("*");
+    const items = await knex('items').select('*');
     return response.json(items);
   }
 }

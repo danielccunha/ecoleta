@@ -1,4 +1,4 @@
-import { Joi, Segments } from "celebrate";
+import { Joi, Segments } from 'celebrate';
 
 export const index = {
   [Segments.QUERY]: Joi.object().keys({
