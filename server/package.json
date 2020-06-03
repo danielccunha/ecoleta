@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "license": "MIT",
   "author": {
     "name": "Daniel Cunha",
@@ -9,7 +9,10 @@
     "url": "https://www.linkedin.com/in/daniel-cunha-53053816b/"
   },
   "scripts": {
-    "dev": "ts-node-dev --no-notify --transpileOnly --ignore-watch node_modules src/server.ts"
+    "start": "ts-bide src/server.ts",
+    "dev": "ts-node-dev --no-notify --transpileOnly --ignore-watch node_modules src/server.ts",
+    "knex:migrate": "knex migrate:latest",
+    "knex:seed": "knex seed:run"
   },
   "dependencies": {
     "celebrate": "^12.1.1",

@@ -46,8 +46,8 @@ cd server
 yarn
 
 # Run migrations and seed
-yarn knex migrate:latest
-yarn knex seed:run
+yarn knex:migrate
+yarn knex:seed
 
 # Optionally copy .env.example file. It contains server port and morgan mode. Both have default values
 cp .env.example .env
