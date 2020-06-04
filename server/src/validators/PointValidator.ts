@@ -5,8 +5,9 @@ export const index = {
     city: Joi.string().required(),
     uf: Joi.string().required(),
     items: Joi.string()
-      .regex(/^\d+(,\d+)*$/)
-      .required(),
+      .regex(/^$|\d+(,\d+)*$/)
+      .allow('')
+      .default(''),
   }),
 };
 
