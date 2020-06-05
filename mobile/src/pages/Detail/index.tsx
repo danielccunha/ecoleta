@@ -76,7 +76,7 @@ const Detail = () => {
         <Image
           style={styles.pointImage}
           source={{
-            uri: data.image,
+            uri: `${api.defaults.baseURL}/uploads/${data.image}`,
           }}
         />
 
