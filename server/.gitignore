@@ -117,3 +117,7 @@ dist
 
 # SQLite database
 *.sqlite
+
+# Uploads
+uploads/*
+!uploads/*.svg

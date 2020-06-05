@@ -51,20 +51,20 @@ class PointController {
     // Doesn't need to do object destructuring because celebrate is already validating the properties.
     // In case user send more properties than request, it will fail
     const { body } = request;
+    const dto = {
+      ...body,
+      image: request.file.filename,
+    };
 
     // Start the transaction
     const trx = await knex.transaction();
 
     // Insert the point to the database omitting items property
-    const [pointId] = await trx('points').insert({
-      image:
-        'https://images.unsplash.com/photo-1501523460185-2aa5d2a0f981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
-      ...omit(body, 'items'),
-    });
+    const [pointId] = await trx('points').insert(omit(dto, 'items'));
 
     // Map items to point_item object
-    const pointItems = body.items.map((itemId: number) => ({
-      item_id: itemId,
+    const pointItems = dto.items.split(',').map((itemId: string) => ({
+      item_id: Number(itemId.trim()),
       point_id: pointId,
     }));
 
@@ -75,7 +75,7 @@ class PointController {
     // Return created point with its id
     return response.json({
       id: pointId,
-      ...body,
+      ...dto,
     });
   }
 }
