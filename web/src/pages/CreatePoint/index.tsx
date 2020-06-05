@@ -6,6 +6,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 import api from "../../services/api";
+import { Dropzone } from "../../components";
 
 import logo from "../../assets/logo.svg";
 import "./styles.css";
@@ -29,6 +30,7 @@ const CreatePoint = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [ufs, setUFs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
+  const [selectedFile, setSelectedFile] = useState<File>();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -123,16 +125,21 @@ const CreatePoint = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
-    const dto = {
-      ...formData,
-      uf: selectedUf,
-      city: selectedCity,
-      items: selectedItems,
-      latitude: selPosition[0].toString(),
-      longitude: selPosition[1].toString(),
-    };
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("whatsapp", formData.whatsapp);
+    data.append("uf", selectedUf);
+    data.append("city", selectedCity);
+    data.append("items", selectedItems.join(","));
+    data.append("latitude", selPosition[0].toString());
+    data.append("longitude", selPosition[1].toString());
 
-    await api.post("points", dto);
+    if (selectedFile) {
+      data.append("image", selectedFile);
+    }
+
+    await api.post("points", data);
     history.push("/");
   };
 
@@ -152,6 +159,8 @@ const CreatePoint = () => {
           Cadastro do <br />
           ponto de coleta
         </h1>
+
+        <Dropzone onFileUploaded={setSelectedFile} />
 
         <fieldset>
           <legend>
