@@ -26,6 +26,8 @@ export const store = {
     longitude: Joi.string().required(),
     city: Joi.string().required(),
     uf: Joi.string().required(),
-    items: Joi.array().items(Joi.number()).default([]),
+    items: Joi.string()
+      .regex(/^$|\d+(,\d+)*$/)
+      .required(),
   }),
 };
