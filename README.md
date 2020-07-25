@@ -92,8 +92,3 @@ I want to thank [Rocketseat](https://github.com/Rocketseat) for this initiative 
 
 This project is under the MIT license. See [LICENSE](LICENSE) for more details.
 
----
-
-<h4 align="center">
-	Made with :heart: by <a href="https://www.linkedin.com/in/daniel-cunha-53053816b/" target="_blank">Daniel Cunha</a> :wave:
-</h4>
